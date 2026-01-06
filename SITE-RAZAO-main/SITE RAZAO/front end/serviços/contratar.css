@@ -1,0 +1,166 @@
+body {
+    background: #f4f7fb;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 40px 0;
+}
+
+.container {
+    width: 1050px;
+    margin: auto;
+}
+
+.logo {
+    width:250px;
+}
+
+.topo {
+    margin-bottom: 40px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    color: #1A3A6D;
+    margin-top: 10px;
+}
+
+.barra-progresso {
+    width: 35%;
+    height: 4px;
+    background: #cde7ff;
+    border-radius: 6px;
+    margin-top: 12px;
+    position: relative;
+}
+
+.barra-progresso::before {
+    content: "";
+    width: 30%;
+    height: 100%;
+    background: #1A73E8;
+    position: absolute;
+    border-radius: 6px;
+}
+
+.conteudo {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+
+.formulario {
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario h1 {
+    color: #1A3A6D;
+    font-size: 28px;
+}
+
+.texto-desc {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    color: #334155;
+}
+
+input,
+select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d9e3ef;
+    font-size: 15px;
+    background: #f8fafc;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #1A73E8;
+    box-shadow: 0 0 0 3px rgba(26,115,232,0.18);
+}
+
+.btn-avancar {
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #d1e6ff;
+    color: #1A3A6D;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.btn-avancar:hover {
+    background: #bddcff;
+}
+
+.lado-direito {
+    background: #f8fbff;
+    border-radius: 18px;
+    padding: 30px;
+    width: 42%;
+    text-align: center;
+}
+
+.lado-direito h2 {
+    font-size: 24px;
+    color: #1A3A6D;
+}
+
+.lado-direito p {
+    color: #475569;
+    margin-bottom: 25px;
+}
+
+.lado-direito img {
+    width: 240px;
+}
+
+.btn-submit {
+    width: 180px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    background: #1A73E8;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: .3s;
+}
+
+.btn-submit:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.loader {
+    width: 18px;
+    height: 18px;
+    border: 3px solid #fff;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    display: none;
+    animation: spin .7s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
