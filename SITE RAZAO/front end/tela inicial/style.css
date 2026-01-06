@@ -2,8 +2,8 @@
 .hero {
     padding: 40px;
     background:
-        linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
-        url("./tela/2.png") center no-repeat;
+        linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
+        url("./tela/fundo.png") center no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -11,11 +11,70 @@
    
 }
 
+.gravata {
+    position: relative;
+    margin-top: -25px; /* sobe a gravata */
+    padding: 8px 32px; /* menor */
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    margin-left: -20px;
+
+    /* Formato gravata */
+     clip-path: polygon(
+        6% 0%, 94% 0%,
+        100% 50%,
+        94% 100%, 6% 100%,
+        0% 50%
+    );
+
+    background: #0e3ea8;
+    overflow: hidden;
+}
+
+/* Listras */
+.gravata::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    background: repeating-linear-gradient(
+        135deg, 
+        rgba(255,255,255,0.22) 0px,
+        rgba(255,255,255,0.22) 9px,
+        transparent 9px,
+        transparent 23px
+    );
+    clip-path: inherit;
+    z-index: 0;
+}
+
+.gravata span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .gravata {
+        margin-top: -15px;
+        padding: 6px 20px;
+        font-size: 1.2rem;
+    }
+}
+
+
+
 .hero-content h1 {
     font-size: 3.6rem;
     font-weight: 800;
     color:#eaeaea;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    
 }
 
 .hero-content{

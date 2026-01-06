@@ -132,15 +132,6 @@
     text-transform: uppercase;
 }
 
-.plano-header h2 {
-    font-size: 1.10rem;
-    font-weight: 500;
-    color: var(--texto-titulo);
-    margin-bottom: 8px;
-    text-transform: uppercase;
-}
-
-
 /* SUBTITULO */
 .plano-header p {
     font-size: 0.95rem;
