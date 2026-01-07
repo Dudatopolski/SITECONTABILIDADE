@@ -17,6 +17,10 @@
     box-sizing: border-box;
 }
 
+.plano-header.expert h3 {
+    color:rgb(4, 93, 226)
+}
+
 .servicos-header h1 {
     font-size: 3.6rem;
     font-weight: 800;

@@ -21,28 +21,33 @@ if (!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['celular'
     try {
         // CONFIG SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Ajustar se não usar Gmail
+        $mail->Host = 'smtpout.secureserver.net';
         $mail->SMTPAuth = true;
-        $mail->Username = 'SEU_EMAIL';
-        $mail->Password = 'SUA_SENHA';
+        $mail->Username = 'razao.jur@contabilrazao.com.br';  // SEU EMAIL
+        $mail->Password = 'SENHA_DE_APP';                    // SUA SENHA DE APLICATIVO
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
         $mail->CharSet = 'UTF-8';
 
-        // Remetente e destino
-        $mail->setFrom($email, $nome);
+        // REMETENTE (seu e-mail, mas aparece o nome do cliente)
+        $mail->setFrom('razao.jur@contabilrazao.com.br', $nome);
+
+        // RECEBEDOR
         $mail->addAddress('razao.jur@contabilrazao.com.br');
+
+        // QUANDO VOCÊ CLICAR “RESPONDER”
+        $mail->addReplyTo($email, $nome);
 
         // Conteúdo
         $mail->isHTML(false);
         $mail->Subject = "Novo Contato pelo Site";
-        $mail->Body = "
-Nome: $nome
-Email: $email
-Celular: $celular
-Cidade: $cidade
-Atividade: $atividade
-";
+        $mail->Body ="
+        Nome: $nome
+        Email: $email
+        Celular: $celular
+        Cidade: $cidade
+        Atividade: $atividade
+        ";
 
         $mail->send();
         header("Location: ../obrigado.html");

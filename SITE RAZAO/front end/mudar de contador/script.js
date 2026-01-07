@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnCloseChat = document.getElementById("close-chat");
     const chatModal = document.getElementById("chat-modal");
 
-    // ---- 1. ESCONDE CTA AO CHEGAR NO RODAPÉ ----
+    // ESCONDE CTA AO CHEGAR NO RODAPÉ ----
     document.addEventListener("scroll", () => {
         const pageHeight = document.body.scrollHeight;
         const windowHeight = window.innerHeight;
@@ -75,17 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // ---- 2. ESCONDE CTA AO ABRIR O CHAT ----
-    btnOpenChat.addEventListener("click", () => {
-        chatModal.style.display = "flex";
-        cta.classList.add("hide");
-    });
-
-    // ---- 3. MOSTRA CTA AO FECHAR O CHAT ----
-    btnCloseChat.addEventListener("click", () => {
-        chatModal.style.display = "none";
-        cta.classList.remove("hide");
-    });
 
 });
 
