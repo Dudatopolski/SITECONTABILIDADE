@@ -20,6 +20,7 @@ html {
     background-position: center;
     background-attachment: fixed;
     max-height: 450px;
+    position:relative;
 }
 
 .hero-content h1 {
@@ -120,6 +121,24 @@ html {
     background: rgba(10, 108, 255, 0.938);
     transform: translateY(-3px);
 }
+
+.assinatura-advogado {
+    position: absolute;
+    bottom: 20px;        /* Ajuste para subir ou descer */
+    right: 35px;         /* Ajuste para aproximar ou afastar da borda */
+    
+    font-family:'Times New Roman', serif; /* destaque elegante */
+    font-style: oblique;
+    font-size: 1.7rem;
+    letter-spacing: 0.5px;
+
+    color: rgba(255, 255, 255, 0.85); /* discreto e elegante */
+    font-weight: 450;
+
+    backdrop-filter: blur(2px); /* melhora contraste sobre fundos variáveis */
+    padding: 4px 8px;
+}
+
 
 
 
