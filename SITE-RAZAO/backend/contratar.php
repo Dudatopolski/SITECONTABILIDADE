@@ -19,10 +19,10 @@ if (!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['telefone
     try {
         // CONFIG SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = 'mail.contabilrazao.com.br';
         $mail->SMTPAuth = true;
-        $mail->Username = 'razao.jur@contabilrazao.com.br';  // SEU EMAIL
-        $mail->Password = 'SENHA_DE_APP';                    // SUA SENHA DE APLICATIVO
+        $mail->Username = 'razao.jur@contabilrazao.com.br';  
+        $mail->Password = 'razao120809';                    
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
         $mail->CharSet = 'UTF-8';

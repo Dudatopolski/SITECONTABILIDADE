@@ -8,7 +8,7 @@ html {
 padding: 40px;
     background:
         linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
-          url("../tela inicial/tela/trocar.png") center/cover no-repeat;
+          url("../tela-inicial/tela/trocar.png") center/cover no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
