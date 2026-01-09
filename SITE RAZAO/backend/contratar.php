@@ -15,7 +15,7 @@ if (!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['telefone
     $plano = $_POST['plano'] ?? '';
 
     $mail = new PHPMailer(true);
-
+    
     try {
         // CONFIG SMTP
         $mail->isSMTP();

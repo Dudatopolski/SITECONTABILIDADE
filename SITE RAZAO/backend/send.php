@@ -19,15 +19,16 @@ if (!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['celular'
     $mail = new PHPMailer(true);
 
     try {
-        // CONFIG SMTP
+
         $mail->isSMTP();
-        $mail->Host = 'smtpout.secureserver.net';
+        $mail->Host = 'mail.contabilrazao.com.br';
         $mail->SMTPAuth = true;
-        $mail->Username = 'razao.jur@contabilrazao.com.br';  // SEU EMAIL
-        $mail->Password = 'SENHA_DE_APP';                    // SUA SENHA DE APLICATIVO
+        $mail->Username = 'razao.jur@contabilrazao.com.br';  
+        $mail->Password = 'razao120809';                    
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
         $mail->CharSet = 'UTF-8';
+
 
         // REMETENTE (seu e-mail, mas aparece o nome do cliente)
         $mail->setFrom('razao.jur@contabilrazao.com.br', $nome);
