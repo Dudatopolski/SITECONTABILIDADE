@@ -1,89 +1,82 @@
-const items = document.querySelectorAll(".faq-item");
-
-items.forEach(item => {
-    item.addEventListener("click", () => {
-        item.classList.toggle("active");
-    });
-});
-
-// ABRIR
-document.getElementById("openModalChat").onclick = () => {
-    document.getElementById("chatModal").style.display = "block";
-    document.getElementById("chatOverlay").style.display = "block";
-};
-
-// FECHAR (botão X)
-document.getElementById("closeModalChat").onclick = () => {
-    document.getElementById("chatModal").style.display = "none";
-    document.getElementById("chatOverlay").style.display = "none";
-};
-
-// FECHAR clicando fora
-document.getElementById("chatOverlay").onclick = () => {
-    document.getElementById("chatModal").style.display = "none";
-    document.getElementById("chatOverlay").style.display = "none";
-};
-
-// FORM - evitar envio nulo e redirecionar
-document.getElementById("chatForm").addEventListener("submit", (e) => {
-    const campos = document.querySelectorAll("#chatForm [required]");
-    let valido = true;
-
-    campos.forEach(campo => {
-        if (!campo.value.trim()) {
-            valido = false;
-            campo.style.border = "2px solid red";
-        } else {
-            campo.style.border = "1px solid #ccc";
-        }
-    });
-
-    if (!valido) {
-        e.preventDefault();
-        alert("Preencha todos os campos obrigatórios!");
-    }
-});
-
-document.addEventListener("scroll", () => {
-
-    const cta = document.querySelector(".cta-area");
-
-    // Altura total da página
-    const pageHeight = document.body.scrollHeight;
-
-    // Altura visível da janela
-    const windowHeight = window.innerHeight;
-
-    // Quanto o usuário já rolou
-    const scrollY = window.scrollY;
-
-    // Se chegou no final
-    if (scrollY + windowHeight >= pageHeight - 40) {
-        cta.classList.add("hide");
-    } else {
-        cta.classList.remove("hide");
-    }
-});
-
 document.addEventListener("DOMContentLoaded", () => {
 
+    /* ===========================
+       FAQ – Abrir e fechar itens
+    ============================ */
+    const items = document.querySelectorAll(".faq-item");
+
+    if (items.length > 0) {
+        items.forEach(item => {
+            item.addEventListener("click", () => {
+                item.classList.toggle("active");
+            });
+        });
+    }
+
+    /* ===========================
+       MODAL DO CHAT
+    ============================ */
+    const openBtn = document.getElementById("openModalChat");
+    const closeBtn = document.getElementById("closeModalChat");
+    const modal = document.getElementById("chatModal");
+    const overlay = document.getElementById("chatOverlay");
+    const form = document.getElementById("chatForm");
+
+    if (openBtn && modal && overlay) {
+        openBtn.addEventListener("click", () => {
+            modal.style.display = "block";
+            overlay.style.display = "block";
+        });
+    }
+
+    if (closeBtn && modal && overlay) {
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+            overlay.style.display = "none";
+        });
+    }
+
+    if (overlay && modal) {
+        overlay.addEventListener("click", () => {
+            modal.style.display = "none";
+            overlay.style.display = "none";
+        });
+    }
+
+    /* ===========================
+       FORMULÁRIO DO CHAT
+    ============================ */
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            alert("Enviado com sucesso!");
+
+            // Ex.: redirecionar
+            // window.location.href = "obrigado.html";
+        });
+    }
+
+    /* ===========================
+       CTA – Esconder ao chegar no rodapé
+    ============================ */
     const cta = document.querySelector(".cta-area");
-    const btnOpenChat = document.getElementById("open-chat");
-    const btnCloseChat = document.getElementById("close-chat");
-    const chatModal = document.getElementById("chat-modal");
 
-    // ---- 1. ESCONDE CTA AO CHEGAR NO RODAPÉ ----
-    document.addEventListener("scroll", () => {
-        const pageHeight = document.body.scrollHeight;
-        const windowHeight = window.innerHeight;
-        const scrollY = window.scrollY;
+    if (cta) {
+        const esconderCTA = () => {
+            const pageHeight = document.body.scrollHeight;
+            const windowHeight = window.innerHeight;
+            const scrollY = window.scrollY;
 
-        if (scrollY + windowHeight >= pageHeight - 40) {
-            cta.classList.add("hide");
-        } else {
-            cta.classList.remove("hide");
-        }
-    });
+            if (scrollY + windowHeight >= pageHeight - 40) {
+                cta.classList.add("hide");
+            } else {
+                cta.classList.remove("hide");
+            }
+        };
+
+        document.addEventListener("scroll", esconderCTA);
+        esconderCTA(); // executa a primeira vez
+    }
 
 });
-
