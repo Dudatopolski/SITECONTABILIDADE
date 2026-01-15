@@ -1,0 +1,90 @@
+# 🌐 Razão Contabilidade – Website Oficial
+
+Este repositório contém o código-fonte do site institucional da **Razão Contabilidade**, desenvolvido para apresentar os serviços da empresa, facilitar o contato com clientes e oferecer páginas informativas como FAQ, Troca de Contador e muito mais.
+
+---
+
+## 🚀 Funcionalidades Principais
+
+- **Homepage completa** com destaque para serviços e identidade visual.
+- **Formulário de contato** integrado via PHP + PHPMailer.
+- **Botão de chat flutuante** com animação JavaScript.
+- **Design responsivo**, adaptado para dispositivos móveis.
+- **Páginas internas** organizadas (FAQ, Trocar de Contador, Quem Somos).
+- **Compatível com hospedagem GoDaddy (cPanel)**.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### **Front-end**
+- HTML5  
+- CSS3  
+- JavaScript  
+- Bootstrap 5  
+
+### **Back-end**
+- PHP  
+- PHPMailer (SMTP e envio de mensagens)
+
+### **Infraestrutura**
+- cPanel / GoDaddy  
+- Sistema de arquivos organizado por telas
+
+---
+
+## 📁 Estrutura do Projeto (modelo)
+
+/razao-contabilidade
+│── index.html
+│── README.md
+│
+│── front-end/
+│ ├── tela-inicial/
+│ ├── trocar-contador/
+│ ├── faq/
+│ ├── logos/
+│ └── assets/
+│
+│── backend/
+│ └── send.php
+│
+└── phpmailer/
+├── src/
+└── PHPMailer.php
+
+## ⚙️ Como Rodar o Projeto
+
+### 🔧 **Rodar localmente**
+1. Instale XAMPP, WAMP ou Laragon.  
+2. Coloque o projeto na pasta `htdocs` ou equivalente.  
+3. Acesse:  
+http://localhost/razao-contabilidade
+
+markdown
+Copiar código
+
+### 🌐 **Rodar na hospedagem GoDaddy**
+1. Envie os arquivos para `public_html/`.  
+2. O arquivo **index.html** deve ficar na raiz dentro de `public_html`.  
+3. Ajuste credenciais de e-mail no arquivo:`/backend/send.php`
+
+4. Teste o formulário no navegador:  
+https://contabilrazao.com.br
+
+yaml
+Copiar código
+
+---
+
+## 📬 Contato
+
+**Razão Contabilidade**  
+E-mail: razao.jur@contabilrazao.com.br
+Site: https://contabilrazao.com.br  
+
+---
+
+## 📄 Licença
+
+Projeto privado – Todos os direitos reservados.
