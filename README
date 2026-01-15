@@ -1,8 +1,7 @@
 # 🌐 Razão Contabilidade – Website Oficial
 
-Este repositório contém o código-fonte do site institucional da **Razão Contabilidade**, desenvolvido para apresentar os serviços da empresa, facilitar o contato com clientes e oferecer páginas informativas como FAQ, Troca de Contador e muito mais.
-
----
+Este repositório contém o código-fonte do site institucional da **Razão Contabilidade**,
+desenvolvido para apresentar os serviços da empresa, facilitar o contato com clientes e oferecer páginas informativas como FAQ, Troca de Contador e muito mais.
 
 ## 🚀 Funcionalidades Principais
 
@@ -12,8 +11,6 @@ Este repositório contém o código-fonte do site institucional da **Razão Cont
 - **Design responsivo**, adaptado para dispositivos móveis.
 - **Páginas internas** organizadas (FAQ, Trocar de Contador, Quem Somos).
 - **Compatível com hospedagem GoDaddy (cPanel)**.
-
----
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -31,9 +28,7 @@ Este repositório contém o código-fonte do site institucional da **Razão Cont
 - cPanel / GoDaddy  
 - Sistema de arquivos organizado por telas
 
----
-
-## 📁 Estrutura do Projeto (modelo)
+## 📁 Estrutura do Projeto
 
 /razao-contabilidade
 │── index.html
@@ -61,9 +56,6 @@ Este repositório contém o código-fonte do site institucional da **Razão Cont
 3. Acesse:  
 http://localhost/razao-contabilidade
 
-markdown
-Copiar código
-
 ### 🌐 **Rodar na hospedagem GoDaddy**
 1. Envie os arquivos para `public_html/`.  
 2. O arquivo **index.html** deve ficar na raiz dentro de `public_html`.  
@@ -72,18 +64,11 @@ Copiar código
 4. Teste o formulário no navegador:  
 https://contabilrazao.com.br
 
-yaml
-Copiar código
-
----
-
 ## 📬 Contato
 
 **Razão Contabilidade**  
 E-mail: razao.jur@contabilrazao.com.br
 Site: https://contabilrazao.com.br  
-
----
 
 ## 📄 Licença
 
