@@ -151,6 +151,15 @@
     gap: 20px;                    /* Espaçamento entre os botões */
     padding-left:2px       
 }
+nav-menu {
+    position: relative;
+    z-index: 9999;
+}
+
+#chatOverlay {
+    display: none;
+    pointer-events: none;
+}
 
 .nav-link {
     padding: 10px 18px;
