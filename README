@@ -1,75 +1,111 @@
-# 🌐 Razão Contabilidade – Website Oficial
+🌐 Razão Contabilidade – Website Institucional Oficial
 
-Este repositório contém o código-fonte do site institucional da **Razão Contabilidade**,
-desenvolvido para apresentar os serviços da empresa, facilitar o contato com clientes e oferecer páginas informativas como FAQ, Troca de Contador e muito mais.
+Este repositório contém o código-fonte do site institucional oficial da Razão Contabilidade, desenvolvido e estruturado como um projeto real por mim, desde o planejamento até o deploy em ambiente de produção.
+O projeto integra front-end, back-end e configuração de hospedagem, com foco em performance, responsividade e facilidade de manutenção.
 
-## 🚀 Funcionalidades Principais
+🔒 Este repositório é público exclusivamente para fins de portfólio profissional.
+O código não está licenciado para reutilização comercial ou redistribuição.
 
-- **Homepage completa** com destaque para serviços e identidade visual.
-- **Formulário de contato** integrado via PHP + PHPMailer.
-- **Botão de chat flutuante** com animação JavaScript.
-- **Design responsivo**, adaptado para dispositivos móveis.
-- **Páginas internas** organizadas (FAQ, Trocar de Contador, Quem Somos).
-- **Compatível com hospedagem GoDaddy (cPanel)**.
 
-## 🛠️ Tecnologias Utilizadas
 
-### **Front-end**
-- HTML5  
-- CSS3  
-- JavaScript  
-- Bootstrap 5  
+🎯 Contexto do Projeto
 
-### **Back-end**
-- PHP  
-- PHPMailer (SMTP e envio de mensagens)
+Site institucional oficial da empresa
 
-### **Infraestrutura**
-- cPanel / GoDaddy  
-- Sistema de arquivos organizado por telas
+Desenvolvido para representar a marca, serviços e canais de contato, contribuindo para visibilidade da empresa
 
-## 📁 Estrutura do Projeto
+Projeto utilizado no meu portfólio para demonstrar experiência prática com entregas reais
+
+Código organizado seguindo padrões de projetos web em produção
+
+Utilizado Design e Paleta de cores da empresa
+
+
+
+🚀 Funcionalidades Implementadas
+
+Homepage institucional com foco em conversão
+
+Formulário de contato funcional com envio de e-mails via isMail
+
+Integração com PHPMailer (PHP)
+
+Botão de chat flutuante com animações em JavaScript
+
+Layout totalmente responsivo (desktop e mobile)
+
+Faqs e Cards interativos 
+
+
+📄 Páginas internas:
+
+FAQ
+
+Quem somos
+
+Troca de Contador
+
+Serviços 
+
+Especialidade 
+
+Abertura de Empresa
+
+Estrutura compatível com hospedagem compartilhada (cPanel / GoDaddy)
+
+
+🛠️ Tecnologias Utilizadas
+- Front-end
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
+- Back-end
+- PHP
+- PHPMailer (envio de e-mails via isMail)
+- Infraestrutura
+- Hospedagem GoDaddy
+- cPanel
+- Deploy em ambiente real de produção
+
+
+
+Organização modular de arquivos:
+📁 Estrutura do Projeto
 
 /razao-contabilidade
 │── index.html
 │── README.md
 │
 │── front-end/
-│ ├── tela-inicial/
-│ ├── trocar-contador/
-│ ├── faq/
-│ ├── logos/
-│ └── assets/
+│   ├── tela-inicial/
+│   ├── trocar-contador/
+|   ├── abrir-empresa/
+|   ├── servicos/
+|   ├── especialidade/
+│   ├── faq/
+│   ├── logos/
+│   └── assets/
 │
 │── backend/
-│ └── send.php
+│   └── send.php
+|   └── contratar.php
 │
 └── phpmailer/
-├── src/
-└── PHPMailer.php
+|   ├── src/
+|    └── PHPMailer.php
+├── obrigado/
+└── obrigado.html,css 
 
-## ⚙️ Como Rodar o Projeto
 
-### 🔧 **Rodar localmente**
-1. Instale XAMPP, WAMP ou Laragon.  
-2. Coloque o projeto na pasta `htdocs` ou equivalente.  
-3. Acesse:  
+A estrutura foi planejada para facilitar manutenção, escalabilidade e leitura por outros desenvolvedores.
+
+⚙️ Execução do Projeto
+🔧 Ambiente local
+Instale XAMPP, WAMP ou Laragon
+
+Coloque o projeto em htdocs e acesse:
 http://localhost/razao-contabilidade
 
-### 🌐 **Rodar na hospedagem GoDaddy**
-1. Envie os arquivos para `public_html/`.  
-2. O arquivo **index.html** deve ficar na raiz dentro de `public_html`.  
-3. Ajuste credenciais de e-mail no arquivo:`/backend/send.php`
-
-4. Teste o formulário no navegador:  
-https://contabilrazao.com.br
-
-## 📬 Contato
-
-**Razão Contabilidade**  
-E-mail: razao.jur@contabilrazao.com.br
-Site: https://contabilrazao.com.br  
-
-## 📄 Licença
-
-Projeto privado – Todos os direitos reservados.
+🌐 Produção
+O site está publicado e em funcionamento em: https://contabilrazao.com.br ✨✨
