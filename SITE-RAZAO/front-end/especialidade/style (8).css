@@ -1,6 +1,4 @@
-/* ================================
-   CARDS VERTICAIS – PADRÃO GLOBAL
-================================ */
+
 body {
     margin: 0;
     padding: 0;
@@ -268,7 +266,6 @@ html {
 /* Responsivo */
 @media (max-width: 900px) {
     .cta-wrapper {
-        grid-template-columns: 1fr;
         text-align: center;
     }
 
@@ -393,13 +390,6 @@ html {
     }
 }
 
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .card-vertical {
-        padding: 30px 25px;
-    }
-}
 
 /* BOTÃO FLUTUANTE */
 .chat-floating-btn {
@@ -679,19 +669,6 @@ html {
     gap:20px
 }
 
-@media (max-width: 768px) {
-    .cta-area {
-        flex-direction: column;
-        padding: 20px;
-        gap: 25px;
-        text-align: center;
-    }
-    .cta-item {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 .contato-footer {
     background: #021327; /* azul escuro profissional */
     padding: 50px 0 20px;
@@ -749,143 +726,292 @@ html {
     font-size: 0.9rem;
 }
 
-html{
-     scroll-behavior: smooth;
-}
+/* mobile-global.css
+   Mobile-only: aplica o mesmo comportamento visual para todas as páginas
+   - Incluir APÓS todos os outros CSS (importantíssimo)
+   - Só afeta mobile (max-width: 768px)
+*/
 
-
-/* ============================================
-   📱 RESPONSIVIDADE GERAL PARA CELULAR
-============================================ */
 @media (max-width: 768px) {
 
-    /* HERO */
-    .hero {
-        height: auto;
-        padding: 60px 20px;
-        background-position: center top;
-        text-align: center;
+  /* HERO (aplica também se houver servicos-hero) */
+  .hero {
+    padding: 20px !important;
+    padding-top: calc(var(--header-height, 0px) + 12px) !important;
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center !important;
+    color: #fff !important;
+    box-sizing: border-box !important;
+    max-height: none !important;
+  }
+
+  .hero-content,
+  .hero-text {
+    margin-top: 4px !important;
+    text-align: left !important;
+  }
+
+  .hero-content h1 {
+    font-size: 28px !important;
+    line-height: 1.02 !important;
+    margin: 6px 0 10px !important;
+    font-weight: 800 !important;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.32) !important;
+    color: #fff !important;
+  }
+
+  .hero-content p {
+    font-size: 14px !important;
+    color: rgba(230,238,252,0.95) !important;
+    margin-bottom: 12px !important;
+  }
+
+   /* --- Botões hero (stacked, full width) --- */
+  .hero-buttons { flex-direction: column; gap: 12px; align-items: stretch; margin-top: 12px; }
+  .hero-buttons .btn-hero,
+  .hero-buttons .btn-outline1 {
+    width: 90%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 26px;
+    box-shadow: 0 8px 24px rgba(15,23,42,0.08);
+  }
+
+  /* Nav: scroll horizontal para não cobrir hero */
+  .nav-menu {
+    gap: 10px !important;
+    padding: 8px 10px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    white-space: nowrap !important;
+  }
+  .nav-link {
+    white-space: nowrap !important;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+  }
+
+  /* Assinatura: não fique absoluta sobre o conteúdo em mobile;
+     vira bloco, centralizada e com tamanho amigável. */
+    .assinatura-advogado {
+    position: relative !important;
+    display: block !important;
+    margin: 12px auto 10px !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    padding: 8px 14px !important;
+    border-radius: 10px !important;
+    background: rgba(11,135,220,0.10) !important; /* leve destaque */
+    color: rgba(255,255,255,0.95) !important;
+    font-size: 1.4rem !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
+    box-shadow: 0 6px 18px rgba(2,34,102,0.04) !important;
+    z-index: 2 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Cards: remover margem negativa que cortava e empilhar sem alterar demais */
+  .cards-vertical-container {
+    margin-top: 0 !important;     /* substitui o margin-top negativo */
+    padding-top: 18px !important; /* espaço confortável entre hero e cards */
+  }
+
+  /* Forçar empilhamento dos grupos (primeiro/segundo) no mobile */
+  .primeiro,
+  .segundo {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: stretch !important;
+  }
+
+  /* Cada card vertical ocupa largura total e tem padding legível */
+  .card-vertical {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 18px !important;
+    box-sizing: border-box !important;
+    margin: 0 0 12px !important;
+  }
+
+ /* FAQ: layout mobile */
+  .faq-container {
+    width: calc(100% - 28px) !important;
+    margin: 16px auto !important;
+    padding: 14px !important;
+    border-radius: 12px !important;
+  }
+
+  /* Footer mobile: empilha sem overflow */
+  .contato-footer {
+    padding: 22px 12px !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .container-footer { flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 12px !important; }
+
+  /* acessibilidade: foco e touch targets */
+  .nav-link:focus,
+  .btn-hero:focus,
+  .btn-outline1:focus,
+  .btn-contratar:focus {
+    outline: 3px solid rgba(2,115,232,0.14) !important;
+    outline-offset: 3px !important;
     }
-
-    .hero-content {
-        margin-top: 20px;
+    
+    .titulo-vantagens{
+        font-weight:15px;
+        margin-top:10px;
     }
-
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-        max-width: 100%;
-    }
-
-    /* BOTÕES */
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn-hero,
-    .btn-outline,
-    .btn-outline1 {
-        width: 100%;
-        text-align: center;
-        padding: 14px;
-        font-size: 1rem;
-    }
-
-    /* NAV */
-    .nav-menu {
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-    }
-
-
-    /* CARDS */
-    .cards-vertical-container {
-        padding: 60px 20px;
-    }
-
-    .card-vertical {
-        padding: 25px 20px;
-        max-width: 100%;
-    }
-
-    .card-vertical h3 {
-        font-size: 1.2rem;
-    }
-
-
-    /* CTA FINAL */
-    .cta-wrapper {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .cta-text h2 {
-        font-size: 28px;
-    }
-
-    .cta-text p {
-        font-size: 15px;
-    }
-
-
-    /* MODAL */
-    .chat-modal-content {
-        flex-direction: column;
-        gap: 20px;
-        padding: 25px;
-    }
-
-    .chat-left,
-    .chat-form {
-        width: 100%;
-    }
-
-
-    /* CTA RODAPÉ */
-    .primeiro,
-    .segundo {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
-
-    .cta-item {
-        flex-direction: column;
-    }
-
-    /* FOOTER */
-    .container-footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
+  
+.cta-area .cta-item {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
+/* forçar botão flutuante visível e posicionado corretamente */
+  .chat-floating-btn {
+    display: flex !important;
+    pointer-events: auto !important;
+    right: 14px !important;
+    bottom: 18px !important;
+    width: 52px !important;
+    height: 52px !important;
+    z-index: 11000 !important;
+  }
+   /* overlay cobre a tela */
+  .chat-overlay {
+    position: fixed;
+    inset: 0;
+  }
 
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 1.9rem;
-    }
+  /* root do modal */
+  .chat-modal {
+    display: none; /* o JS controla via classe/inline */
+    position: fixed;
+    inset: 0;
+    padding: 12px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .hero-content h2 {
-        font-size: 1.05rem;
-    }
+  /* cartão central: empilhado (1 coluna) para todo mobile */
+  .chat-modal-content {
+    width: 100%;
+    max-width: 420px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column; /* empilha: pergunta acima do formulário */
+    gap: 12px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+    box-sizing: border-box;
+    position: relative;
+  }
 
-    .hero {
-        padding-top: 30px;
-    }
+  /* botão fechar */
+  .chat-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f1f5f9;
+    color: #1e293b;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 
-    .faq-question {
-        font-size: 1rem;
-    }
-}
+  /* LEFT: mostramos só a pergunta (título). escondemos parágrafo e imagem. */
+  .chat-left {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* pergunta centralizada para melhor aparência */
+  }
+
+  .chat-left h3 {
+    margin: 6px 0;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    color: #21304a;
+    font-weight: 700;
+  }
+
+  /* esconder descrição e imagem para não apertar o layout */
+  .chat-left p{
+      margin: 6px 0;
+    font-size: 15px;
+    line-height: 1.25;
+    color: #21304a;
+    font-weight: 400;
+  }
+
+  /* formulário ocupa 100% e rola se necessário */
+  .chat-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: calc(90vh - 120px); /* ajusta espaço para header/fechar */
+    padding: 0;
+  }
+
+  .chat-form label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #21304a;
+    margin-top: 4px;
+  }
+
+  .chat-form input,
+  .chat-form textarea,
+  .chat-form select {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(30,41,59,0.08);
+    background: #fff;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+  }
+
+  .chat-buttons {
+    margin-top: 6px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .btn-enviar {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #1263f0;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  /* garantir que display flex seja aplicado quando abrir (sua classe 'open') */
+  .chat-modal.open {
+    display: flex !important ;
+  }}

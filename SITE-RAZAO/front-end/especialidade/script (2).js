@@ -67,14 +67,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// Mobile guard: zera e esconde a CTA, centraliza modal behavior
+/*
+  script-especialidade.js
+  Versão para a página "Especialidade" — baseada no seu script (1).js
+  Mantém seu markup/dados, corrige comportamento mobile para não esconder o botão de chat.
+*/
+
+// Substitua a IIFE antiga por esta versão:
 (function() {
   function enforceMobileLayout() {
     var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
 
-    // Hide CTA area completely on mobile (safety)
-    var cta = document.querySelectorAll('.cta-area, .cta-area *');
-    cta.forEach(function(el) {
+    // Esconder apenas os itens da CTA (não esconder o botão, overlay ou modal)
+    var ctaItems = document.querySelectorAll('.cta-area .cta-item');
+    ctaItems.forEach(function(el) {
       if (isMobile) {
         el.style.display = 'none';
         el.style.visibility = 'hidden';
@@ -86,50 +92,56 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Ensure CSS var is zero and no body padding
+    // Ajustes de CSS/variáveis
     if (isMobile) {
       document.documentElement.style.setProperty('--cta-height', '0px');
       document.body.style.paddingBottom = '0';
-      // floating button position
       var floatBtn = document.querySelector('.chat-floating-btn');
-      if (floatBtn) floatBtn.style.bottom = '18px';
+      if (floatBtn) {
+        floatBtn.style.bottom = '18px';
+        floatBtn.style.display = 'flex';
+        floatBtn.style.pointerEvents = 'auto';
+        floatBtn.style.zIndex = '12050';
+      }
     } else {
       document.documentElement.style.removeProperty('--cta-height');
       document.body.style.paddingBottom = '';
       var floatBtn = document.querySelector('.chat-floating-btn');
-      if (floatBtn) floatBtn.style.bottom = '';
+      if (floatBtn) {
+        floatBtn.style.bottom = '';
+        floatBtn.style.display = '';
+        floatBtn.style.pointerEvents = '';
+        floatBtn.style.zIndex = '';
+      }
     }
   }
 
-  // Run on load and changes
+  // Run on load and on viewport changes
   window.addEventListener('load', enforceMobileLayout);
   window.addEventListener('resize', function(){ setTimeout(enforceMobileLayout, 80); });
   window.addEventListener('orientationchange', function(){ setTimeout(enforceMobileLayout, 120); });
 
-  // Also make sure modal opens centered: adjust when open button is clicked
+  // Ensure modal open/close handlers exist (guard safe)
   var openBtn = document.getElementById('openModalChat');
-  if (openBtn) {
-    openBtn.addEventListener('click', function(){
-      setTimeout(function(){
-        var modal = document.getElementById('chatModal');
-        if (modal) {
-          modal.classList.add('open');
-          modal.style.display = 'flex';
-          // lock scroll
-          document.documentElement.style.overflow = 'hidden';
-        }
-      }, 20);
+  var overlay = document.getElementById('chatOverlay');
+  var modal = document.getElementById('chatModal');
+  var closeBtn = document.getElementById('closeModalChat');
+
+  if (openBtn && overlay && modal) {
+    openBtn.addEventListener('click', function(e){
+      e.preventDefault && e.preventDefault();
+      overlay.style.display = 'block';
+      modal.style.display = 'flex';
+      modal.classList.add('open');
+      document.documentElement.style.overflow = 'hidden'; // opcional
     });
   }
 
-  // Close handlers: ensure scroll unlocked
-  var closeBtn = document.getElementById('closeModalChat');
-  var overlay = document.getElementById('chatOverlay');
   function closeModalHandler() {
-    var modal = document.getElementById('chatModal');
+    if (overlay) overlay.style.display = 'none';
     if (modal) {
-      modal.classList.remove('open');
       modal.style.display = '';
+      modal.classList.remove('open');
     }
     document.documentElement.style.overflow = '';
   }

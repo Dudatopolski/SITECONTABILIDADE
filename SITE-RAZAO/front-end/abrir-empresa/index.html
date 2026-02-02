@@ -4,50 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abrir Empresa</title>
-    <link rel="icon" href="/front-end/tela-inicial/tela/favicon.ico">
+    <link rel="icon" href="../tela-inicial/tela/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 
+<body>
 
+    <!-- HERO -->
     <div class="hero">
-    <header class="header">
-        <nav class="nav-menu">
-            <a href="/index.html">INÍCIO</a>
-            <a href="/front-end/servicos/index.html">SERVIÇOS</a>
-            <a href="/front-end/troca-contador/index.html">TROCAR CONTADOR</a>
-            <a href="/front-end/especialidade/index.html">ESPECIALIDADE</a>
-            <a href="/front-end/abrir-empresa/index.html">ABRIR EMPRESA</a>
+        <header class="header">
+            <nav class="nav-menu">
+                <a href="/index.html" class="nav-link">INÍCIO</a>
+                <a href="../servicos/index.html" class="nav-link">SERVIÇOS</a>
+                <a href="../troca-contador/index.html" class="nav-link">TROCAR CONTADOR</a>
+                <a href="../especialidade/index.html" class="nav-link">ESPECIALIDADE</a>
+                <a href="../abrir-empresa/index.html" class="nav-link active">ABRIR EMPRESA</a>
+            </nav>
+        </header>
 
+        <div class="hero-content">
+            <h1>Abertura de Empresa</h1>
+            <h2>Foco em Atendimento e Confiança</h2>
+            <p>Tenha uma contabilidade que realmente responde: atendimento rápido, claro e humanizado.</p>
 
-            
-        </nav>
-    </header>
-
-    <div class="hero-content">
-        <h1>Abertura de Empresa</h1>
-        <h2>Foco em Atendimento e Confiança</h2>
-        <p>Tenha uma contabilidade que realmente responde:
-             mude para um atendimento rápido, claro e humanizado.</p>
-
-        <div class="hero-buttons">
-            <a href="#faq" class="btn-hero">Mais Informações</a>
-           <a href="https://api.whatsapp.com/send/?phone=551141376902&text&type=phone_number&app_absent=0" 
-             class="btn-outline1">Chamar no WhatsApp</a>
-
+            <div class="hero-buttons">
+                <a href="#van" class="btn-hero">Mais Informações</a>
+                <a href="https://api.whatsapp.com/send/?phone=551141376902&text&type=phone_number&app_absent=0" class="btn-outline1">Chamar no WhatsApp</a>
+            </div>
         </div>
     </div>
-</div>
 
-        <!-- SESSÃO VANTAGENS -->
- <section class="vantagens" id="van">
-    <h2 class="titulo-vantagens">
-        QUAIS VANTAGENS VOCÊ TERÁ CONTRATANDO NOSSA CONTABILIDADE?
-    </h2>
- </section>
+    <!-- VANTAGENS -->
+    <section class="vantagens" id="van">
+        <h2 class="titulo-vantagens">
+            QUAIS VANTAGENS VOCÊ TERÁ CONTRATANDO NOSSA CONTABILIDADE?
+        </h2>
+    </section>
 
-
-<!-- SESSÃO DE CARDS VERTICAIS -->
+   <!-- SESSÃO DE CARDS VERTICAIS -->
 <section class="cards-vertical-container" id="cardd">
     <div class="primeiro">
     <div class="card-vertical">
@@ -97,134 +92,126 @@
 
 </section>
 
-<section class="faq-section" id="faq">
 
-    <h1 class="faq-title">PERGUNTAS & RESPOSTAS<br><span>Sobre Abertura de Empresa</span></h1>
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
 
-    <div class="faq-container">
-        <div class="faq-item">
-            <button class="faq-question">Quanto tempo leva para abrir um CNPJ?</button>
-            <div class="faq-answer">
-             Não havendo nenhum impedimento, leva em torno de 15 à 30 dias.
+        <h1 class="faq-title">PERGUNTAS & RESPOSTAS<br>
+            <span>Sobre Abertura de Empresa</span>
+        </h1>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button class="faq-question">Quanto tempo leva para abrir um CNPJ?</button>
+                <div class="faq-answer">Entre 15 e 30 dias, se não houver impedimentos.</div>
             </div>
-        </div>
 
-        <div class="faq-item">
-            <button class="faq-question">MEI, ME ou LTDA: qual tipo de empresa escolher?</button>
-            <div class="faq-answer">
-              Depende do seu faturamento e forma de atuação:
-
-                MEI: Até R$ 81 mil por ano, em atividades permitidas.
-
-                ME: Para quem vai faturar acima do limite de MEI.
-
-                LTDA: É para empresas com faturamento superior à R$4.800.000,00 por ano.
-
-                Te ajudamos a escolher o formato mais vantajoso desde o início.
+            <div class="faq-item">
+                <button class="faq-question">MEI, ME ou LTDA: qual tipo escolher?</button>
+                <div class="faq-answer">
+                    MEI — até R$ 81 mil/ano<br>
+                    ME — para faturamento acima disso<br>
+                    LTDA — estrutura profissional para faturamento alto<br>
+                    <br>Te ajudamos a escolher o mais vantajoso.
+                </div>
             </div>
-        </div>
 
-        <div class="faq-item">
-            <button class="faq-question">Quais documentos são necessários para abrir um CNPJ?</button>
-            <div class="faq-answer">
-            É prudente que essa relação de documentos seja retirada na contabilidade.
+            <div class="faq-item">
+                <button class="faq-question">Quais documentos são necessários?</button>
+                <div class="faq-answer">A lista completa é fornecida pela contabilidade para evitar erros.</div>
             </div>
+
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-area">
+
+        <div class="cta-item">
+            <img src="../tela-inicial/logos/chat.png" class="cta-icon">
+            <div>
+                <h4>Assessoria especializada</h4>
+                <p>No seu segmento</p>
+            </div>
+            <a href="../servicos/index.html" class="btn-outline">Conheça o plano Experts</a>
         </div>
 
+        <div class="cta-item">
+            <img src="../tela-inicial/logos/telefone.png" class="cta-icon">
+            <div>
+                <h4>Dúvidas?</h4>
+                <p>Entre em contato</p>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=551141376902" class="btn-filled">Fale com um especialista</a>
+        </div>
+
+    </section>
+
+    <!-- BOTÃO FLUTUANTE -->
+    <div class="chat-floating-btn" id="openModalChat">
+        <img src="../tela-inicial/logos/botao-flutuante.png" alt="chat">
     </div>
-</section>
 
+    <!-- OVERLAY -->
+    <div class="chat-overlay" id="chatOverlay"></div>
 
-      
-        <!-- BARRA DE CHAMADA -->
-<section class="cta-area">
-    <div class="cta-item">
-        <img src="../tela-inicial/logos/chat.png" class="cta-icon">
-        <div>
-            <h4>Assessoria especializada</h4>
-            <p>No seu segmento</p>
-        </div>
-        <a href="../servicos/index.html" class="btn-outline">Conheça o plano Experts</a>
-    </div>
+    <!-- MODAL -->
+    <div class="chat-modal" id="chatModal">
+        <button class="chat-close" id="closeModalChat">x</button>
 
-    <div class="cta-item">
-        <img src="../tela-inicial/logos/telefone.png" class="cta-icon">
-        <div>
-            <h4>Dúvidas?</h4>
-            <p>Entre em contato</p>
-        </div>
-        <a href="https://api.whatsapp.com/send/?phone=551141376902" class="btn-filled">
-            Fale com um especialista
-        </a>
-    </div>
-    
-        <!-- BOTÃO FLUTUANTE -->
-<div class="chat-floating-btn" id="openModalChat">
-    <img src="../tela-inicial/logos/botao-flutuante.png" alt="chat">
-</div>
+        <div class="chat-modal-content">
 
-<!-- OVERLAY -->
-<div class="chat-overlay" id="chatOverlay"></div>
+            <div class="chat-left">
+                <h3>Ficou com alguma dúvida?</h3>
+                <p>Preencha os dados e entraremos em contato com você!</p>
+                <img src="../tela-inicial/tela/atendente.jpg" class="chat-image">
+            </div>
 
-<!-- MODAL -->
-<div class="chat-modal" id="chatModal">
+            <form class="chat-form" id="chatForm" method="POST" action="../../backend/send.php">
 
-    <button class="chat-close" id="closeModalChat">x</button>
+                <label>Nome</label>
+                <input type="text" name="nome" placeholder="Seu nome" required>
 
-    <div class="chat-modal-content">
+                <label>Celular</label>
+                <input type="text" name="celular" placeholder="(DDD) 000000-0000" required>
 
-        <!-- ESQUERDA -->
-        <div class="chat-left">
-            <h3>Ficou com alguma dúvida?</h3>
-            <p>Preencha os dados e entraremos em contato com você!</p>
-            <img src="../tela-inicial/tela/atendente.jpg" class="chat-image">
-        </div>
+                <label>E-mail</label>
+                <input type="email" name="email" placeholder="email@exemplo.com" required>
 
-        <!-- DIREITA -->
-        <form class="chat-form" id="chatForm" method="POST" action="../backend/send.php">
+                <label>Cidade</label>
+                <input type="text" name="cidade" placeholder="São Paulo" required>
 
-            <label>Nome</label>
-            <input type="text" name="nome" placeholder="Seu nome" required>
+                <label>Atividade</label>
+                <input type="text" name="atividade" placeholder="Ex: Marketing,TI..." required>
 
-            <label>Celular</label>
-            <input type="text" name="celular" placeholder="(DDD) 00000-0000" required>
-
-            <label>E-mail</label>
-            <input type="email" name="email" placeholder="email@exemplo.com" required>
-
-            <label>Cidade</label>
-            <input type="text" name="cidade" placeholder="São Paulo" required>
-
-            <label>Atividade</label>
-            <input type="text" name="atividade" placeholder="Ex: Marketing, TI..." required>
-
-            <div class="chat-buttons">
                 <button type="submit" class="btn-enviar">Entre em Contato Conosco</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="contato-footer">
+        <div class="container-footer">
+
+            <div class="col-footer">
+                <h3>Dados de Contato</h3>
+                <p>12º andar, Estr. São Francisco, 2008 - conj.1208<br>
+                   Jardim Wanda – Taboão da Serra – SP<br>
+                </p>
+
+                <p>
+                    <strong>Telefone:</strong> (11) 4137-6902<br>
+                    <strong>E-mail:</strong> dp@contabilrazao.com.br
+                </p>
             </div>
-        </form>
+
+            <div class="copy">
+                © 2025 Razão Contabilidade — Todos os direitos reservados
+            </div>
+
         </div>
-        </div>
-        </section>
-
-                <footer class="contato-footer">
-    <div class="container-footer">
-
-        <div class="col-footer">
-            <h3>Dados de Contato</h3>
-            <p>12º andar, Estr. São Francisco, 2008 - conj.1208<br>
-                 - Jardim Wanda, Taboão da Serra - SP, 06765-904<br>
-                 </p>
-
-            <p><strong>Telefone:</strong> (11) 4137-6902<br>
-            <strong>E-mail:</strong> dp@contabilrazao.com.br</p>
-        </div>
-    <div class="copy">
-        © 2025 Razão Contabilidade — Todos os direitos reservados
-    </div>
-    </div>
-</footer>
-
-
+    </footer>
 
 </body>
 </html>

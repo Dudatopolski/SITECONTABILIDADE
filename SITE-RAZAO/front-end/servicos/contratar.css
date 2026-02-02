@@ -164,3 +164,76 @@ select:focus {
     to { transform: rotate(360deg); }
 }
 
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+    background: #f4f7fb;
+  }
+
+  .container {
+    width: 80%;
+    padding: 16px;
+  }
+
+  /* topo */
+  .topo {
+    margin-bottom: 20px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .barra-progresso {
+    width: 100%;
+  }
+
+  /* cartão principal */
+  .conteudo {
+    flex-direction: column;
+    padding: 20px;
+    gap: 0;
+    border-radius: 16px;
+  }
+
+  /* formulário ocupa tudo */
+  .formulario {
+    width: 100%;
+  }
+
+  .formulario h1 {
+    font-size: 24px;
+  }
+
+  .texto-desc {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input,
+  select {
+    padding: 14px;
+    font-size: 16px; /* 🔥 evita zoom automático no iOS */
+    border-radius: 12px;
+  }
+
+  /* botão grande, confortável */
+  .btn-submit {
+    width: 100%;
+    margin-top: 24px;
+    padding: 16px;
+    font-size: 17px;
+    border-radius: 14px;
+  }
+
+  /* esconde lado direito no mobile */
+  .lado-direito {
+    display: none;
+  }
+
+}

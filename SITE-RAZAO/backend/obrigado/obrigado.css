@@ -17,7 +17,7 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 50px;
     border-radius: 20px;
-    width: 80%;
+    width: 100%;
     max-width: 600px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     animation: fadeIn 1s ease-out;
@@ -63,9 +63,160 @@ p {
         opacity: 0;
         transform: scale(0.8);
     }
-    100% {
+    90% {
         opacity: 1;
         transform: scale(1);
     }
 }
 
+
+@media (max-width: 768px) {
+  
+  /* CORPO DA PÁGINA */
+  body {
+    background: linear-gradient(135deg, #e6f2ff 0%, #b3d9ff 100%); /* Azul bebê gradiente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* CONTAINER PRINCIPAL */
+  .container {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px 25px;
+    background: rgba(255, 255, 255, 0.95); /* Branco levemente transparente */
+    border-radius: 24px;
+    box-shadow: 
+      0 10px 30px rgba(77, 136, 255, 0.15), /* Sombra azul suave */
+      0 4px 15px rgba(0, 82, 204, 0.1); /* Sombra mais intensa */
+    border: 2px solid #4d88ff; /* Borda azul royal */
+    animation: fadeIn 0.8s ease-out;
+    text-align: center;
+   
+  }
+
+  /* MENSAGEM INTERNA */
+  .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  /* TÍTULO */
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a5fb4; /* Azul royal mais escuro */
+    margin-bottom: 0;
+    line-height: 1.3;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* TEXTO */
+  p {
+    font-size: 17px;
+    color: #4a6fa5; /* Azul acinzentado suave */
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 5px;
+  }
+
+  /* BOTÃO VOLTAR */
+  .btn-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #4d88ff, #6699ff); /* Gradiente azul royal */
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 
+      0 6px 20px rgba(77, 136, 255, 0.3),
+      0 3px 8px rgba(77, 136, 255, 0.2);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 280px;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* EFEITO HOVER DO BOTÃO */
+  .btn-back:hover {
+    background: linear-gradient(to right, #3a78ff, #5588ff);
+    transform: translateY(-4px);
+    box-shadow: 
+      0 10px 25px rgba(77, 136, 255, 0.4),
+      0 5px 12px rgba(77, 136, 255, 0.25);
+  }
+
+  /* EFEITO ATIVO (CLICK) */
+  .btn-back:active {
+    transform: translateY(-1px);
+    box-shadow: 
+      0 4px 12px rgba(77, 136, 255, 0.25),
+      0 2px 6px rgba(77, 136, 255, 0.2);
+  }
+
+  /* ÍCONE NO BOTÃO (OPCIONAL) */
+  .btn-back::before {
+    content: "←";
+    margin-right: 10px;
+    font-size: 18px;
+    opacity: 0.9;
+  }
+
+  /* ANIMAÇÃO DE ENTRADA ATUALIZADA */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    70% {
+      opacity: 1;
+      transform: translateY(-5px) scale(1.02);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* DECORAÇÃO EXTRA (BOLHAS AZUIS) - OPCIONAL */
+  body::before {
+    content: "";
+    position: fixed;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(102, 153, 255, 0.1); /* Azul bebê muito claro */
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    bottom: -80px;
+    left: -80px;
+    width: 300px;
+    height: 300px;
+    background: rgba(77, 136, 255, 0.08); /* Azul royal muito claro */
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+
+}
