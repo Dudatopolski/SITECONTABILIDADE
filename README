@@ -1,111 +1,232 @@
-🌐 Razão Contabilidade – Website Institucional Oficial
+<p align="center">
+  <h1 align="center">🌐 Razão Contabilidade</h1>
+  <p align="center">
+    <strong>Website Institucional Oficial – Projeto Real em Produção</strong>
+  </p>
+</p>
 
-Este repositório contém o código-fonte do site institucional oficial da Razão Contabilidade, desenvolvido e estruturado como um projeto real por mim, desde o planejamento até o deploy em ambiente de produção.
-O projeto integra front-end, back-end e configuração de hospedagem, com foco em performance, responsividade e facilidade de manutenção.
+<p align="center">
+  🔗 <a href="https://contabilrazao.com.br" target="_blank">Acessar site em produção</a>
+</p>
 
-🔒 Este repositório é público exclusivamente para fins de portfólio profissional.
-O código não está licenciado para reutilização comercial ou redistribuição.
+---
 
+## ✨ Visão Geral
 
+Este repositório contém o **código-fonte do site institucional oficial da Razão Contabilidade**, desenvolvido como um **projeto real**, desde o planejamento até o **deploy em ambiente de produção**.
 
-🎯 Contexto do Projeto
+O projeto integra **front-end**, **back-end** e **configuração de hospedagem**, com foco em:
 
-Site institucional oficial da empresa
+- Performance  
+- Responsividade  
+- Manutenibilidade  
+- Estrutura profissional de projeto  
 
-Desenvolvido para representar a marca, serviços e canais de contato, contribuindo para visibilidade da empresa
+---
 
-Projeto utilizado no meu portfólio para demonstrar experiência prática com entregas reais
+## 🔒 Aviso Importante
 
-Código organizado seguindo padrões de projetos web em produção
+> ⚠️ **Este repositório é público exclusivamente para fins de portfólio profissional.**  
+>  
+> O código **não está licenciado para reutilização comercial ou redistribuição**.
 
-Utilizado Design e Paleta de cores da empresa
+---
 
+## 🎯 Contexto do Projeto
 
+- Site institucional oficial da empresa **Razão Contabilidade**  
+- Desenvolvido para representar a marca, serviços e canais de contato  
+- Projeto utilizado no portfólio para demonstrar **experiência prática com entregas reais**  
+- Código organizado seguindo **padrões de projetos web em produção**  
+- Utilização da **identidade visual, design e paleta de cores da empresa**
 
-🚀 Funcionalidades Implementadas
+---
 
-Homepage institucional com foco em conversão
+## 🚀 Funcionalidades Implementadas
 
-Formulário de contato funcional com envio de e-mails via isMail
+- Homepage institucional com foco em conversão  
+- Formulário de contato funcional com envio de e-mails  
+- Integração com **PHPMailer (PHP)** via **isMail**  
+- Botão de chat flutuante com animações em JavaScript  
+- Layout totalmente responsivo (desktop e mobile)  
+- FAQs e cards interativos  
 
-Integração com PHPMailer (PHP)
+---
 
-Botão de chat flutuante com animações em JavaScript
+## 📄 Páginas Internas
 
-Layout totalmente responsivo (desktop e mobile)
+- FAQ  
+- Quem Somos  
+- Troca de Contador  
+- Serviços  
+- Especialidade  
+- Abertura de Empresa  
 
-Faqs e Cards interativos 
+> Estrutura compatível com **hospedagem compartilhada** (cPanel / GoDaddy)
 
+---
 
-📄 Páginas internas:
+## 🛠️ Tecnologias Utilizadas
 
-FAQ
+### Front-end
+- HTML5  
+- CSS3  
+- JavaScript  
+- Bootstrap 5  
 
-Quem somos
+### Back-end
+- PHP  
+- PHPMailer (envio de e-mails via isMail)  
 
-Troca de Contador
+### Infraestrutura
+- Hospedagem GoDaddy  
+- cPanel  
+- Deploy em ambiente real de produção  
 
-Serviços 
+---
 
-Especialidade 
+## 🧱 Estrutura do Projeto
 
-Abertura de Empresa
-
-Estrutura compatível com hospedagem compartilhada (cPanel / GoDaddy)
-
-
-🛠️ Tecnologias Utilizadas
-- Front-end
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
-- Back-end
-- PHP
-- PHPMailer (envio de e-mails via isMail)
-- Infraestrutura
-- Hospedagem GoDaddy
-- cPanel
-- Deploy em ambiente real de produção
-
-
-
-Organização modular de arquivos:
-📁 Estrutura do Projeto
-
+```bash
 /razao-contabilidade
 │── index.html
 │── README.md
 │
-│── front-end/
+├── front-end/
 │   ├── tela-inicial/
 │   ├── trocar-contador/
-|   ├── abrir-empresa/
-|   ├── servicos/
-|   ├── especialidade/
+│   ├── abrir-empresa/
+│   ├── servicos/
+│   ├── especialidade/
 │   ├── faq/
 │   ├── logos/
 │   └── assets/
 │
-│── backend/
-│   └── send.php
-|   └── contratar.php
+├── backend/
+│   ├── send.php
+│   └── contratar.php
 │
-└── phpmailer/
-|   ├── src/
-|    └── PHPMailer.php
+├── phpmailer/
+│   └── src/
+│       └── PHPMailer.php
+│
 ├── obrigado/
-└── obrigado.html,css 
+│   └── obrigado.html
+│
+└── obrigado.css
+<p align="center">
+  <h1 align="center">🌐 Razão Contabilidade</h1>
+  <p align="center">
+    <strong>Website Institucional Oficial – Projeto Real em Produção</strong>
+  </p>
+</p>
 
+<p align="center">
+  🔗 <a href="https://contabilrazao.com.br" target="_blank">Acessar site em produção</a>
+</p>
 
-A estrutura foi planejada para facilitar manutenção, escalabilidade e leitura por outros desenvolvedores.
+---
 
-⚙️ Execução do Projeto
-🔧 Ambiente local
-Instale XAMPP, WAMP ou Laragon
+## ✨ Visão Geral
 
-Coloque o projeto em htdocs e acesse:
-http://localhost/razao-contabilidade
+Este repositório contém o **código-fonte do site institucional oficial da Razão Contabilidade**, desenvolvido como um **projeto real**, desde o planejamento até o **deploy em ambiente de produção**.
 
-🌐 Produção
-O site está publicado e em funcionamento em: https://contabilrazao.com.br ✨✨
+O projeto integra **front-end**, **back-end** e **configuração de hospedagem**, com foco em:
+
+- Performance  
+- Responsividade  
+- Manutenibilidade  
+- Estrutura profissional de projeto  
+
+---
+
+## 🔒 Aviso Importante
+
+> ⚠️ **Este repositório é público exclusivamente para fins de portfólio profissional.**  
+>  
+> O código **não está licenciado para reutilização comercial ou redistribuição**.
+
+---
+
+## 🎯 Contexto do Projeto
+
+- Site institucional oficial da empresa **Razão Contabilidade**  
+- Desenvolvido para representar a marca, serviços e canais de contato  
+- Projeto utilizado no portfólio para demonstrar **experiência prática com entregas reais**  
+- Código organizado seguindo **padrões de projetos web em produção**  
+- Utilização da **identidade visual, design e paleta de cores da empresa**
+
+---
+
+## 🚀 Funcionalidades Implementadas
+
+- Homepage institucional com foco em conversão  
+- Formulário de contato funcional com envio de e-mails  
+- Integração com **PHPMailer (PHP)** via **isMail**  
+- Botão de chat flutuante com animações em JavaScript  
+- Layout totalmente responsivo (desktop e mobile)  
+- FAQs e cards interativos  
+
+---
+
+## 📄 Páginas Internas
+
+- FAQ  
+- Quem Somos  
+- Troca de Contador  
+- Serviços  
+- Especialidade  
+- Abertura de Empresa  
+
+> Estrutura compatível com **hospedagem compartilhada** (cPanel / GoDaddy)
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### Front-end
+- HTML5  
+- CSS3  
+- JavaScript  
+- Bootstrap 5  
+
+### Back-end
+- PHP  
+- PHPMailer (envio de e-mails via isMail)  
+
+### Infraestrutura
+- Hospedagem GoDaddy  
+- cPanel  
+- Deploy em ambiente real de produção  
+
+---
+
+## 🧱 Estrutura do Projeto
+
+```bash
+/razao-contabilidade
+│── index.html
+│── README.md
+│
+├── front-end/
+│   ├── tela-inicial/
+│   ├── trocar-contador/
+│   ├── abrir-empresa/
+│   ├── servicos/
+│   ├── especialidade/
+│   ├── faq/
+│   ├── logos/
+│   └── assets/
+│
+├── backend/
+│   ├── send.php
+│   └── contratar.php
+│
+├── phpmailer/
+│   └── src/
+│       └── PHPMailer.php
+│
+├── obrigado/
+│   └── obrigado.html
+│
+└── obrigado.css
