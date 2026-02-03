@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Dudatopolski/SITECONTABILIDADE/blob/main/SITE-RAZAO/front-end/tela-inicial/logos/raz%C3%A3o%20logo%202%20(Post%20para%20Facebook).png" width:60px >
+  <img src="https://github.com/Dudatopolski/SITECONTABILIDADE/blob/main/SITE-RAZAO/front-end/tela-inicial/logos/raz%C3%A3o%20logo%202%20(Post%20para%20Facebook).png" width="180"> 
 </p>
   <h1 align="center">🌐 Razão Contabilidade</h1>
   <p align="center">
