@@ -1,8 +1,5 @@
 <p align="center">  
-  ![Status](https://img.shields.io/badge/status-em%20produção-brightgreen)
-![Projeto Real](https://img.shields.io/badge/projeto-real-blue)
-![Frontend](https://img.shields.io/badge/frontend-HTML%20%7C%20CSS%20%7C%20JS-orange)
-![Backend](https://img.shields.io/badge/backend-PHP-purple)
+ 
   <h1 align="center">🌐 Razão Contabilidade</h1>
   <p align="center">
     <strong>Website Institucional Oficial – Projeto Real em Produção</strong>
@@ -162,7 +159,5 @@ O projeto integra **front-end**, **back-end** e **configuração de hospedagem**
 - Estrutura escalável para novas funcionalidades
 - Facilita leitura e colaboração entre desenvolvedores
 
-
 ## 📬 Contato
-
-📧 Email: seuemail@email.com  
+📧 Email:dudatopolski@gmail.com  
