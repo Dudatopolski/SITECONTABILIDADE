@@ -71,7 +71,7 @@ O projeto integra **front-end**, **back-end** e **configuração de hospedagem**
 ## 🛠️ Tecnologias Utilizadas
 
 <p>
-  <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap,git,github,php,PHPmailer,cpanel" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap,git,github,php,PHPmailer,vscode,photoshop"/><img src="https://img.icons8.com/color/48/000000/cpanel.png" alt="cPanel" width="48" height="48"/>
 </p>
 
 ### Front-end
