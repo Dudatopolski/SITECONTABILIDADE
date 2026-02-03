@@ -70,6 +70,10 @@ O projeto integra **front-end**, **back-end** e **configuração de hospedagem**
 
 ## 🛠️ Tecnologias Utilizadas
 
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap,gitbash,github" />
+</p>
+
 ### Front-end
 - HTML5  
 - CSS3  
@@ -78,13 +82,19 @@ O projeto integra **front-end**, **back-end** e **configuração de hospedagem**
 
 ### Back-end
 - PHP  
-- PHPMailer (envio de e-mails via isMail)  
+- PHPMailer (envio de e-mails via isMail)
+
+<p>
+  <img src="https://skillicons.dev/icons?i=php,phpmailer" />
+</p>
 
 ### Infraestrutura
 - Hospedagem GoDaddy  
 - cPanel  
 - Deploy em ambiente real de produção  
-
+<p>
+  <img src="https://skillicons.dev/icons?i=godaddy,cpanel"/>
+</p>
 ---
 
 ## 🧱 Estrutura do Projeto
