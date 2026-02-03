@@ -1,4 +1,8 @@
-<p align="center">
+<p align="center">  
+  ![Status](https://img.shields.io/badge/status-em%20produção-brightgreen)
+![Projeto Real](https://img.shields.io/badge/projeto-real-blue)
+![Frontend](https://img.shields.io/badge/frontend-HTML%20%7C%20CSS%20%7C%20JS-orange)
+![Backend](https://img.shields.io/badge/backend-PHP-purple)
   <h1 align="center">🌐 Razão Contabilidade</h1>
   <p align="center">
     <strong>Website Institucional Oficial – Projeto Real em Produção</strong>
@@ -6,7 +10,7 @@
 </p>
 
 <p align="center">
-  🔗 <a href="https://contabilrazao.com.br" target="_blank">Acessar site em produção</a>
+  🔗 <a href="https://contabilrazao.com.br" target="_blank">Acessar site</a>
 </p>
 
 ---
@@ -112,6 +116,53 @@ O projeto integra **front-end**, **back-end** e **configuração de hospedagem**
 │
 ├── obrigado/
 │   └── obrigado.html
-│
-└── obrigado.css
+│   └── obrigado.css
+
 ```
+
+## 🧠 Desafios Técnicos & Soluções
+
+### 📱 Responsividade
+- Adaptação manual para breakpoints  
+- Ajustes específicos para dispositivos móveis  
+- Garantia de boa experiência em desktop e mobile  
+
+---
+
+
+---
+
+### ⚡ Performance
+- Otimização de imagens para reduzir tempo de carregamento
+- Organização eficiente de assets (CSS, JS e imagens)
+- Redução de carregamentos desnecessários
+- Estrutura pensada para melhor desempenho em produção
+
+---
+
+### 🔐 Segurança & Boas Práticas
+- Validação de formulários no **back-end**
+- Separação clara entre lógica e camada visual
+- Código organizado e preparado para manutenção
+- Estrutura pensada para crescimento do projeto
+
+---
+
+### 📈 SEO & Performance
+- Utilização de **HTML semântico**
+- Meta tags configuradas corretamente
+- Estrutura amigável para indexação por buscadores
+- Boas práticas de carregamento e renderização
+
+---
+
+### 🧩 Arquitetura do Projeto
+- Separação clara entre **front-end** e **back-end**
+- Organização modular de pastas
+- Estrutura escalável para novas funcionalidades
+- Facilita leitura e colaboração entre desenvolvedores
+
+
+## 📬 Contato
+
+📧 Email: seuemail@email.com  
