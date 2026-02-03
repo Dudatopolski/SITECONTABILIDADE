@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./tela-de-login/img/logo.png" alt="Logo Razão Contabilidade" width="180">
+  <img src="../tela-de-login/img/logo.png" alt="Logo Razão Contabilidade" width="180">
 </p>
   <h1 align="center">🌐 Razão Contabilidade</h1>
   <p align="center">
