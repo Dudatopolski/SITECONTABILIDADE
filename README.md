@@ -160,4 +160,6 @@ O projeto integra **front-end**, **back-end** e **configuração de hospedagem**
 - Facilita leitura e colaboração entre desenvolvedores
 
 ## 📬 Contato
-📧 Email:dudatopolski@gmail.com  
+📧 Email: dudatopolski@gmail.com  
+
+<p align="center"> Desenvolvido com ❤️ para aprendizado e evolução profissional </p>
