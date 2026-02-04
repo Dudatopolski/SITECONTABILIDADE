@@ -7,46 +7,57 @@ require __DIR__ . '/phpmailer/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    $nome = $_POST['nome'] ?? '';
-    $celular = $_POST['celular'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $cidade = $_POST['cidade'] ?? '';
-    $atividade = $_POST['atividade'] ?? '';
-
-    $mail = new PHPMailer(true);
-
-    try {
-
-        $mail->isMail();
-        $mail->CharSet = 'UTF-8';
-
-        $mail->setFrom('razao.jur@contabilrazao.com.br', 'Site Contábil Razão');
-        $mail->addAddress('razao.jur@contabilrazao.com.br');
-        $mail->addReplyTo($email, $nome);
-
-        $mail->Subject = 'Novo contato pelo site';
-        $mail->Body =
-        "
-        Nome: $nome
-        Email: $email
-        Telefone: $celular
-        Cidade: $cidade
-        Atividade: $atividade";
-
-        $mail->send();
-
-        // Caminho certo para o obrigado
-        header("Location: https://contabilrazao.com.br/backend/obrigado/obrigado.html");
-        exit();
-
-    } catch (Exception $e) {
-        echo 'Erro ao enviar: ' . $mail->ErrorInfo;
-        exit();
-    }
+// Só aceita POST
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    die('Requisição inválida.');
 }
 
-echo 'Requisição inválida.';
-exit();
-?>
+// Sanitização básica
+$nome      = trim(htmlspecialchars($_POST['nome'] ?? ''));
+$celular   = trim(htmlspecialchars($_POST['celular'] ?? ''));
+$email     = trim(htmlspecialchars($_POST['email'] ?? ''));
+$cidade    = trim(htmlspecialchars($_POST['cidade'] ?? ''));
+$atividade = trim(htmlspecialchars($_POST['atividade'] ?? ''));
+
+// Validação mínima
+if (empty($nome) || empty($email)) {
+    die('Nome e email são obrigatórios.');
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    die('Email inválido.');
+}
+
+$mail = new PHPMailer(true);
+
+try {
+
+    // Envio simples via mail()
+    $mail->isMail();
+    $mail->CharSet = 'UTF-8';
+
+    $mail->setFrom('razao.jur@contabilrazao.com.br', 'Site Contábil Razão');
+    $mail->addAddress('razao.jur@contabilrazao.com.br');
+    $mail->addReplyTo($email, $nome);
+
+    $mail->Subject = 'Novo contato pelo site';
+
+    // Corpo do email
+    $mail->Body =
+        "Nome: $nome\n" .
+        "Email: $email\n" .
+        "Telefone: $celular\n" .
+        "Cidade: $cidade\n" .
+        "Atividade: $atividade\n";
+
+    $mail->send();
+
+    // Redireciona após sucesso
+    header("Location: https://contabilrazao.com.br/backend/obrigado/obrigado.html");
+    exit();
+
+} catch (Exception $e) {
+
+    echo "Erro ao enviar: {$mail->ErrorInfo}";
+    exit();
+}
